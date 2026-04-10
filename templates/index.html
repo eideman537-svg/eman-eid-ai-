@@ -4,54 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Eman ChatBot</title>
-/* --- كود تصليح الموبايل السحري لإيمان --- */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column; /* يخلي القائمة فوق والشات تحت بدل جنب بعض */
-        overflow-y: auto;
-    }
-
-    .sidebar {
-        width: 100% !important; /* يخلي القائمة الجانبية تاخد عرض الموبايل كله */
-        height: auto !important;
-        position: relative;
-    }
-
-    .sb-body {
-        max-height: 200px; /* يصغر قائمة الجنب عشان ما تاخدش شاشة الموبايل كلها */
-    }
-
-    .main {
-        width: 100% !important;
-        height: 100vh;
-    }
-
-    .welcome-screen {
-        padding: 20px 10px;
-    }
-
-    .w-name {
-        font-size: 20px !important; /* يصغر كلمة Eman ChatBot */
-    }
-
-    .quick-grid, .tools-grid, .stat-cards {
-        grid-template-columns: 1fr !important; /* يخلي المربعات تترص تحت بعضها */
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .bubble {
-        max-width: 90% !important; /* يخلي كلام الشات واخد مساحة مريحة للعين */
-    }
-
-    .inp-box {
-        margin: 5px;
-    }
-}
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#09090B;color:#fff;height:100vh;display:flex;overflow:hidden}
-.sidebar{width:268px;background:#0F0F12;border-left:1px solid rgba(255,255,255,0.05);display:flex;flex-direction:column;flex-shrink:0;height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#09090B;color:#fff;height:100vh;display:block;overflow:hidden}
+.sidebar{width:100px;background:#0F0F12;border-left:1px solid rgba(255,255,255,0.05);display:flex;flex-direction:column;flex-shrink:0;height:100vh}
 .brand{display:flex;align-items:center;gap:11px;padding:20px 16px 16px}
 .brand-logo{width:38px;height:38px;background:linear-gradient(135deg,#7C6FFF,#A855F7);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(124,111,255,0.35)}
 .brand-logo svg{width:21px;height:21px;fill:#fff}
@@ -112,7 +68,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .stat-item{display:flex;flex-direction:column;align-items:center;flex:1}
 .stat-num{font-size:18px;font-weight:800;color:#A89BFF}
 .stat-lbl{font-size:10px;color:rgba(255,255,255,.35);margin-top:2px}
-.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%;max-width:500px}
+.quick-grid{display:grid;grid-template-columns: 1fr;gap:9px;width:100%;max-width:500px}
 .q-card{padding:13px 15px;background:#141418;border:1px solid rgba(255,255,255,.07);border-radius:12px;cursor:pointer;text-align:right;transition:all .18s}
 .q-card:hover{border-color:rgba(124,111,255,.45);background:rgba(124,111,255,.08);transform:translateY(-1px)}
 .q-card:hover .q-title{color:#A89BFF}
@@ -176,7 +132,7 @@ strong{color:#fff;font-weight:700}
 .page-view::-webkit-scrollbar-thumb{background:rgba(255,255,255,.07);border-radius:3px}
 .pg-title{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.4px;margin-bottom:4px}
 .pg-sub{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:24px}
-.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.tools-grid{display:grid;grid-template-columns:1fr;gap:11px}
 .tc{background:#141418;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px;cursor:pointer;transition:all .18s}
 .tc:hover{border-color:rgba(124,111,255,.4);background:rgba(124,111,255,.07);transform:translateY(-2px)}
 .tc:hover .tc-name{color:#A89BFF}
@@ -184,7 +140,7 @@ strong{color:#fff;font-weight:700}
 .tc-icon svg{width:18px;height:18px;stroke-width:1.7;stroke-linecap:round;fill:none}
 .tc-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;transition:color .15s}
 .tc-desc{font-size:11px;color:rgba(255,255,255,.35);line-height:1.55}
-.stat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+.stat-cards{display:grid;grid-template-columns:repeat(1fr);gap:10px;margin-bottom:22px}
 .sc{background:#141418;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px}
 .sc-n{font-size:24px;font-weight:800;color:#fff}
 .sc-l{font-size:11px;color:rgba(255,255,255,.3);margin-top:3px}
