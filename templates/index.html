@@ -4,6 +4,50 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Eman ChatBot</title>
+/* --- كود تصليح الموبايل السحري لإيمان --- */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* يخلي القائمة فوق والشات تحت بدل جنب بعض */
+        overflow-y: auto;
+    }
+
+    .sidebar {
+        width: 100% !important; /* يخلي القائمة الجانبية تاخد عرض الموبايل كله */
+        height: auto !important;
+        position: relative;
+    }
+
+    .sb-body {
+        max-height: 200px; /* يصغر قائمة الجنب عشان ما تاخدش شاشة الموبايل كلها */
+    }
+
+    .main {
+        width: 100% !important;
+        height: 100vh;
+    }
+
+    .welcome-screen {
+        padding: 20px 10px;
+    }
+
+    .w-name {
+        font-size: 20px !important; /* يصغر كلمة Eman ChatBot */
+    }
+
+    .quick-grid, .tools-grid, .stat-cards {
+        grid-template-columns: 1fr !important; /* يخلي المربعات تترص تحت بعضها */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .bubble {
+        max-width: 90% !important; /* يخلي كلام الشات واخد مساحة مريحة للعين */
+    }
+
+    .inp-box {
+        margin: 5px;
+    }
+}
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#09090B;color:#fff;height:100vh;display:flex;overflow:hidden}
